@@ -1,9 +1,9 @@
 const container = document.getElementById("grid-container");
 
-const userColor = document.querySelectorAll("input");
+// const userColor = document.querySelectorAll("input");
 
-function createGrid(numOfSquares) {
-  let dimension = numOfSquares * 34 + 5;
+function createGrid(numOfSquares, size) {
+  let dimension = numOfSquares * size + 0;
   container.style.width = `${dimension}px`;
   container.style.height = `${dimension}px`;
 
@@ -14,20 +14,22 @@ function createGrid(numOfSquares) {
       const div = document.createElement("div");
       div.classList.add("grid-item");
 
-      div.style.width = "10px";
-      div.style.height = "10px";
-
+      div.style.width = `${size}px`;
+      div.style.height = `${size}px`;
+      div.addEventListener("mouseover", function () {
+        div.style.backgroundColor = "black";
+      });
       container.appendChild(div);
-
-      // var mouseEvent = document.getElementById("grid-item");
-      // mouseEvent.addEventListener("mouseover", func);
-
-      // function func (){
-      //   var.item = document.getElementById("grid-items");
-      //   item.setAttribute("style", background-color, "blue")
-      // }
     }
   }
 }
 
-createGrid(5);
+createGrid(16, 30);
+
+const refreshButton = document.querySelector(".refresh-button");
+
+const refreshPage = () => {
+  location.reload();
+};
+
+refreshButton.addEventListener("click", refreshPage);
