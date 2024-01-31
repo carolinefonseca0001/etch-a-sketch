@@ -2,33 +2,35 @@ body {
   width: 100vw;
   height: 100vh;
   display: inline-block;
-  justify-content: center;
-  align-items: center;
   background-color: red;
 }
 
 .grid-item {
   border: 0.1px solid black;
-  grid-gap: 0.1px;
   gap: 0.5px;
-  row-gap: 0px;
-  column-gap: 0px;
   background-color: rgb(193, 193, 193);
+  justify-content: center;
+  align-items: center;
 }
 #grid-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   grid-gap: 0px;
-  gap: 0px;
-  row-gap: 0px;
-  column-gap: 0px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 425px;
 }
 .refresh-button {
   background-color: yellow;
   display: inline-block;
 }
-h1 {
+
+#header {
+  align-items: center;
   color: yellow;
   font-family: "brush script mt";
+  font-size: 80px;
+  text-align: center;
+  padding-bottom: 0px;
 }

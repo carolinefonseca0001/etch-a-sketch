@@ -3,14 +3,14 @@ const container = document.getElementById("grid-container");
 // const userColor = document.querySelectorAll("input");
 
 function createGrid(numOfSquares, size) {
-  let dimension = numOfSquares * size + 0;
+  let dimension = numOfSquares * size + 5;
   container.style.width = `${dimension}px`;
   container.style.height = `${dimension}px`;
 
   container.textContent = "";
 
-  for (let i = 0; i <= numOfSquares; i++) {
-    for (let j = 0; j <= numOfSquares; j++) {
+  for (let i = 0; i < numOfSquares; i++) {
+    for (let j = 0; j < numOfSquares; j++) {
       const div = document.createElement("div");
       div.classList.add("grid-item");
 
@@ -24,7 +24,7 @@ function createGrid(numOfSquares, size) {
   }
 }
 
-createGrid(16, 30);
+createGrid(20, 30);
 
 const refreshButton = document.querySelector(".refresh-button");
 
