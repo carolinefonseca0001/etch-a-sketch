@@ -3,7 +3,7 @@ const container = document.getElementById("grid-container");
 // const userColor = document.querySelectorAll("input");
 
 function createGrid(numOfSquares, size) {
-  let dimension = numOfSquares * size + 5;
+  let dimension = numOfSquares * size + 0;
   container.style.width = `${dimension}px`;
   container.style.height = `${dimension}px`;
 

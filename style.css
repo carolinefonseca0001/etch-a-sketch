@@ -6,6 +6,7 @@ body {
 }
 
 .grid-item {
+  box-sizing: border-box;
   border: 0.1px solid black;
   gap: 0.5px;
   background-color: rgb(193, 193, 193);
